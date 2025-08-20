@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Middleware;
+
+use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Illuminate\Http\Request;
+
+class Authenticate extends Middleware
+{
+    /**
+     * Get the path the user should be redirected to when they are not authenticated.
+     */
+    /***
+     * هذا الجزء خاص بتحويل المستخدم العادي الى صفحة الدخول الخاصة به
+     */
+    protected function redirectTo(Request $request)
+    {
+        if (! $request->expectsJson()) {
+            if($request->is('admin') || $request->is('admin/*')){
+                return route('admin.login');
+            }
+            return route('admin.login');
+        }
+    }
+}

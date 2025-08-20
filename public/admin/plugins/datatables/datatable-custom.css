@@ -1,0 +1,67 @@
+/* منع تمدد الجدول */
+.dataTables_wrapper {
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+#oc_datatable {
+    table-layout: fixed; /* يجعل الأعمدة بعرض ثابت */
+    width: 100% !important;
+}
+
+#oc_datatable th, #oc_datatable td {
+    white-space: nowrap; /* منع النص من الكسر (إذا أردت) */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px; /* تحديد عرض أقصى */
+}
+
+/* إذا كنت تستخدم wrapper */
+#kt_ecommerce_sales_table_wrapper {
+    overflow-x: hidden;
+}
+/* تعديلات للجزء السفلي */
+.dataTables_wrapper .dataTables_info {
+    float: left;
+    margin-top: 10px;
+}
+
+.dataTables_wrapper .dataTables_paginate {
+    float: right;
+    margin-top: 10px;
+}
+
+.dataTables_paginate .paginate_button {
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.dataTables_paginate .paginate_button.current {
+    background-color: #007bff;
+    color: white;
+    border-color: #0a58ca;
+}
+
+.dataTables_paginate .paginate_button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+.dataTables_length select{
+    margin: 12px;
+}
+.dataTables_info{
+}
+.dataTables_paginate{
+}
+
+.card.card-flush {
+    /*border: 1px solid #e3e3e3;*/
+    border: 1.5px solid #ebebeb;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
