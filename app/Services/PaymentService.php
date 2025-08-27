@@ -182,7 +182,7 @@ class PaymentService
 
  private function generateBookingNumber()
     {
-return  'BK-' . date('Y') . '-' . str_pad(1, 6, '0', STR_PAD_LEFT);
+return  'BK-' . date('Y:M:D:H:i:s') . '-' . str_pad( 6, '0', STR_PAD_LEFT);
     }
 
     /**
